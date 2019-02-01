@@ -8,12 +8,14 @@ use Symfony\Component\Routing\Annotation\Route;
 class MainPageController extends AbstractController
 {
     /**
-     * @Route("/", name="main_page")
+     * @Route("/", name="homepage")
      */
-    public function index()
+    public function homepage()
     {
-        return $this->render('main_page/index.html.twig', [
-            'controller_name' => 'MainPageController',
+    	$calendars = null;
+
+        return $this->render('main_page/homepage.html.twig', [
+        	'calendars'		=> $calendars,
         ]);
     }
 }

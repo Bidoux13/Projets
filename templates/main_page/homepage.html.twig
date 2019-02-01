@@ -1,0 +1,171 @@
+{% extends 'nav_public.html.twig' %}
+
+{% block stylesheets %}
+	{{ parent() }}
+	<link href="{{ asset('build/css/homepage.css') }}" rel="stylesheet" type="text/css" />
+{% endblock %}
+{% block title %}Wind and Fire Chapter 139{% endblock %}
+
+{% block content %}
+<div class="container-fluid">
+	<div class="citation_home"><cite>« … Our job is no war, no politic … … just saving lives … »</cite></div>
+	<div class="row">
+		<div class="d-none d-lg-block col-lg-2 col-xl-3">
+		</div>
+
+		<div class="col-lg-8 col-xl-6">
+			<div id="carousel_accueil" class="carousel slide my-2 mx-auto" data-ride="carousel" style="max-width:900px;">
+			  <div class="carousel-inner">
+			    <div class="carousel-item active">
+			      <img class="d-block w-100" src="{{ asset('/images/carrousel/01.jpg') }}" alt="photographies chapter 139 Wind and Fire">
+			    </div>
+			    <div class="carousel-item">
+			      <img class="d-block w-100" src="{{ asset('/images/carrousel/02.jpg') }}" alt="photographies chapter 139 Wind and Fire">
+			    </div>
+			    <div class="carousel-item">
+			      <img class="d-block w-100" src="{{ asset('/images/carrousel/03.jpg') }}" alt="photographies chapter 139 Wind and Fire">
+			    </div>
+			    <div class="carousel-item">
+			      <img class="d-block w-100" src="{{ asset('/images/carrousel/04.jpg') }}" alt="photographies chapter 139 Wind and Fire">
+			    </div>
+			    <div class="carousel-item">
+			      <img class="d-block w-100" src="{{ asset('/images/carrousel/05.jpg') }}" alt="photographies chapter 139 Wind and Fire">
+			    </div>
+			    <div class="carousel-item">
+			      <img class="d-block w-100" src="{{ asset('/images/carrousel/06.jpg') }}" alt="photographies chapter 139 Wind and Fire">
+			    </div>
+			    <div class="carousel-item">
+			      <img class="d-block w-100" src="{{ asset('/images/carrousel/07.jpg') }}" alt="photographies chapter 139 Wind and Fire">
+			    </div>
+			  </div>
+			  <a class="carousel-control-prev" href="#carousel_accueil" role="button" data-slide="prev">
+			    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+			    <span class="sr-only">Previous</span>
+			  </a>
+			  <a class="carousel-control-next" href="#carousel_accueil" role="button" data-slide="next">
+			    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+			    <span class="sr-only">Next</span>
+			  </a>
+			</div>
+		</div>
+
+		<div class="d-none d-lg-block col-lg-2 col-xl-3 pt-3">
+			<ul class="list-group text-light mx-auto" style="max-width:300px;">
+				<li class="list-group-item bg-dark">
+					<h2>Nos prochaines rencontres :</h2>
+				</li>
+				{% if calendars %}
+					{% for calendar in calendars %}
+						<li class="list-group-item bg-dark">
+							<div class="news_date">{{ calendar.date|date("d/m/Y", "Europe/Paris") }}</div>
+							<div class="news_text">{{ calendar.title }}</div>
+						</li>
+					{% endfor %}
+				{% else %}
+					<li class="list-group-item bg-dark">
+						<div class="news_date">26/11/2016</div>
+						<div class="news_text">Pour l'instant, il n'y a pas de rencontre prévue, mais savez-vous que cette date représente la création du chapitre 139 ?</div>
+					</li>
+				{% endif %}
+			</ul>
+		</div>
+</div>
+<div class="container">
+	<div id="historiqueMC">
+		<h2 id="historiqueMC_titre"> L'origine des MC</h2>
+		<article class="row historiqueMC">
+			<div class="col-12">
+				<p class="row contenu_texte">
+					Après la deuxième guerre mondiale, les soldats américains, passionnés de moto, qui avaient alors perdu tout repère et qui souhaitaient retrouver l'esprit d'aventure, de liberté et de camaraderie qu'ils avaient connu durant le conflit, se sont regroupés en clubs MC avec un système de fonctionnement militaire, d'où l'importance du port des couleurs assimilées à un uniforme et une hiérarchie rappelant celle des militaires... Ils s'organisent alors en diverses bandes, les motos de légende (les Harley-Davidson et les Indians) symbolisant alors cette recherche de liberté. Ils ont échangé leurs ailes contre des roues.
+				</p>
+				<p class="row contenu_texte">
+					Leur état d'esprit et leur façon de vivre n'étant pas sur la même ligne de conduite que les motards affiliés à l'A.M.A (Américan Motorcycle Association), association beaucoup plus en corrélation moralement avec une Amérique encore puritaine...
+				</p>
+				<p class="row contenu_texte">
+					C'est le 4 juillet 1947, à Hollister en Californie, qu'une page importante de la culture Biker s'est tournée. Ce jour-là, le club local de moto et l'association des vétérans organisent, justement pour la fête Nationale, un concours de motos avec différentes épreuves. Près de 4.000 passionnés se donnent alors rendez-vous dans cette petite ville. Quelques 500 motards provoquent de nombreux débordements (courses en pleine rue, violations quasi-systématiques du code de la route, jets de bouteilles, beuveries...) donnant lieu à quelques arrestations par les 7 policiers locaux, trop peu nombreux. Une délégation de motards se rend au poste de police pour exiger la libération de leurs frères : le refus des policiers marquera le début des émeutes. Celles-ci dureront jusqu'au 6 juillet où un détachement de 32 hommes de la Garde Nationale venu en renfort met fin aux exactions (il faudra toutefois quelques tirs de gaz lacrymogène). Il y a en tout 50 blessés et une centaine d'arrestations. l'A.M.A. affirme, par la voix de son Président, que 99% des adèptes de la moto sont des gens honnètes. Immédiatement, par défi, les membres des gangs de motards adoptent le sigle 1% et se définissent un-pourcentistes . C'est l'acte de naissance officiel des gangs de motards.
+				</p>
+			</div>
+		</article>
+	</div>
+
+	<div id="historiqueWF">
+		<h2 id="historiqueWF_titre"> Le Wind and Fire MC</h2>
+	    <article class="row historiqueWF">
+	        <div class="col-12">
+	            <p class="row contenu_texte">
+	                Le Wind & Fire MC est un Moto-Club International regroupant des sapeurs pompiers roulant sur Harley-Davidson.<br />
+	                Ce Moto-Club est composé de plus de 4 500 membres et de 200 Chapters, répartis dans 53 Etats et 20 Pays.<br />
+	                Au-delà du bien-être que procure le plaisir de se retrouver à plusieurs à rouler en Harley , le Wind & Fire M.C Firefighters œuvre, comme de nombreux autres clubs, au profit d’associations caritatives et plus particulièrement pour les orphelins des Sapeurs Pompiers de France ( l’O.D.P.) pour lesquelles nous organisons des actions dont les bénéfices leur sont reversés.
+	            </p>
+	            <p class="row contenu_texte">
+	                Le Wind & Fire M.C a été fondé en 1991 à Santa Barbara en Californie aux Etats Unis par JERRY EIBERT, permettant la création du 1er chapter : « SANTA BARBARA CHAPTER » le 18 Décembre 1991.<br />En France, sous le N° # 68, le 1er chapter Wind & Fire M.C est officiellement créé au début de l’année 2002, venant ainsi compléter les Chapters Européens au nombre de 6 à l’époque. Depuis, afin de faire face aux nombre de membres sans cesse croissant, ce 1er Chapter Français a dû se restructurer.<br />Ainsi, l’année 2008 a vu l’abandon du Chapter existant sous le N° # 68 pour la création du : Wind & Fire M.C Firefighters ( tricolore ) sous forme d’association a but non lucratif, permettant de regrouper sous un même rocker plus de 100 membres répartis dans toute la France à travers 11 Chapters ayant pour nom :<br />
+		            <div class="row">
+		            	<div class="col-12 col-sm-6 text-center">
+			                <ul class="list-unstyled liste_chapter">
+			                    <li>OCCITANIE # 136</li>
+			                    <li>BOURGOGNE # 138</li>
+			                    <li>NORD AQUITAINE # 139</li>
+			                    <li>NORMANDY COAST # 140</li>
+			                    <li>EAST ZONE # 141</li>
+			                    <li>RHONE ALPES # 149</li>
+			                    <li>PROVENCE # 157</li>
+			                    <li>BOUGNAT # 158</li>
+			                    <li>ATLANTIC COAST # 166</li>
+			                    <li>EUSKADI-BIARN # 171</li>
+			                </ul>
+			            </div>
+			            <div class="d-none d-sm-block col-sm-6 text-center"><img src="{{ asset('/images/historiqueWF_logo.png') }}" alt="image wind and fire chapter 139" /></div>
+	                </div>
+	            </p>
+	            <p class="row contenu_texte">
+	                <strong>CONDITION D'ADHESION</strong><br />Pour être membre du Wind & Fire M.C Firefighters il faut :<br />
+	                <ul>
+	                    <li>Etre Sapeur Pompier actif ou retraité, civil, militaire ou privé,</li>
+	                    <li>Conduire une Harley Davidson,</li>
+	                    <li>S’acquitter d’une cotisation,</li>
+	                    <li>S’investir dans les actions du Wind & Fire M.C Firefighters.</li>
+	                </ul>
+	            </p>
+	            <p class="row contenu_texte">
+	                Chaque nouveau membre ne se verra attribuer les couleurs (Maltesse et Rocker) qu’à l’issue d’une année de probation (Prospect) au cours de laquelle le membre démontrera son état d’esprit et ses engagements.
+	            </p>
+	            <p class="row contenu_texte">
+	                Aujourd’hui, le Wind & Fire M.C Firefighters regroupe des Sapeurs Pompiers actifs ou retraités, civils, militaires ou privés roulant sur Harley Davidson, ayant plaisir à se rencontrer et à rouler ensemble à travers la France entière et dans les autres Pays Européens.
+	            </p>
+	            <p class="row contenu_texte">
+	                Les nombreux Centres de Secours permettent à l’ensemble des membres de sillonner la France entière, et même au-delà de nos frontières. La passion, le respect, la solidarité, la convivialité et l’entraide soulignent l’état d’esprit du Wind & Fire M.C Firefighters déjà bien forgé par notre devise : <cite>« SAUVER ou PERIR »</cite>
+	            </p>
+	            <p class="row contenu_texte">
+	                Il est à noter que le Wind & Fire M.C Firefighters ne revendique aucune territorialité et n’est support d’aucun Club Motocyclistes ou autre organisation.
+	            </p>
+	            <p class="row contenu_texte">
+	                Notre façon d’être, basée avant tout sur le respect, notre engagement, notre solidarité et notre neutralité propres à notre corporation, se manifestent bien au-delà des idéaux et des convictions particulières à chacun.
+	            </p>
+	            <p class="row contenu_texte">
+	                A ce titre, les propos de JERRY EIBERT, Sapeur Pompier fondateur du Wind & Fire M.C sont :<br /><cite>« …..Our job is no war, no politic… …just saving lives…… »</cite>
+	            </p>
+	            <p class="row contenu_texte">
+	                Le 11 aout 2002, à l’initiative de nos Frères Anglais, tous les Chapters Européens se sont retrouvés à Londres pour rendre hommage à nos 343 Frères d’armes du FDNY, dont 6 Frères du Wind & Fire M.C, disparus le 11 septembre 2001 dans les attentats du World Trade Center.
+	            </p>
+	            <p class="row contenu_texte">
+	                Un hommage, empreint d’une grande émotion, leur a ainsi été rendu devant le monument aux morts des Firefighters of London. We don’t forget, nous n’oublierons jamais. Depuis ce tragique évènement, tous les Full-Members portent, cousu sur leur jaquettes côté cœur, le patch 9.11-343 (11 septembre 343 FDNY).De plus, le 911 est le numéro d’appel des secours aux Etats Unis.
+	            </p>
+	            <p class="row contenu_texte">
+	                <strong>LE WFMC DANS LE MONDE MC</strong><br />Dans le milieu « Biker » le seul fait d’arborer le sigle « MC » impose à un club, soit de rentrer en conflit avec un club majeur 1% (Hells Angels ou Bandidos pour la France), soit de choisir et « servir » un de ces clubs.
+	            </p>
+	            <p class="row contenu_texte">
+	                Le Wind and and Fire MC est reconnu et respecté aussi bien sur le plan national qu’international, tant par le nombre de ses membres que par la corporation qu’il représente. Nous sommes acceptés en tant que club MC « neutre » à part entière. Nous avons néanmoins un devoir d’exemplarité dans notre comportement, le port de nos couleurs et nos propos, chose qui nous est coutumière au quotidien dans le port de nos uniformes professionnels.
+	            </p>
+	            <div class="text-center contenu_texte">
+	            	<cite>
+		                <p>Toi qui viens de lire notre humble et jeune histoire</p>
+		                <p>Sache qu’au-delà de la passion et fraternité qui nous unissent</p>
+		                <p>Wind & Fire nous sommes, Sapeurs Pompiers nous resterons.</p>
+		            </cite>
+	            </div>
+	        </div>
+	    </article>
+	</div>
+</div>
+
+{% endblock %}
