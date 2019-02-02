@@ -18,4 +18,12 @@ class MainPageController extends AbstractController
         	'calendars'		=> $calendars,
         ]);
     }
+
+    /**
+     * @Route("/presentation", name="presentation")
+     */
+    public function presentation()
+    {
+    	return $this->render('main_page/presentation.html.twig');
+    }
 }
