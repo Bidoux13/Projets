@@ -21,6 +21,7 @@ Encore
     .addStyleEntry('css/main', './assets/scss/main.scss')
     .addStyleEntry('css/homepage', './assets/scss/homepage.scss')
     .addStyleEntry('css/presentation', './assets/scss/presentation.scss')
+    .addStyleEntry('css/security_forms', './assets/scss/security_forms.scss')
     //.addEntry('page1', './assets/js/page1.js')
     //.addEntry('page2', './assets/js/page2.js')
 

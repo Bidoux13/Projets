@@ -26,11 +26,11 @@
         </li>
         {% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
           <li class="nav-item mx-2">
-            <a class="nav-link" href="">Déconnexion</a>
+            <a class="nav-link" href="{{ path('app_logout') }}">Déconnexion</a>
           </li>
         {% else %}
           <li class="nav-item mx-2">
-            <a class="nav-link" href="">Connexion</a>
+            <a class="nav-link" href="{{ path('app_login') }}">Connexion</a>
           </li>
         {% endif %}
       </ul>

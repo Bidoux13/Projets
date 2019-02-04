@@ -1,0 +1,49 @@
+{% extends 'nav_public.html.twig' %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    <link href="{{ asset('build/css/security_forms.css') }}" rel="stylesheet" type="text/css" />
+{% endblock %}
+
+{% block title %}Wind and Fire #139{% endblock %}
+
+{% block content %}
+    <div class="container">
+        <div class="form_security_container">
+            <div class="form_security_message">
+                {% if error %}
+                    <div class="alert alert-danger">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
+                {% endif %}
+                {% for flashMessage in app.session.flashbag.get('success') %}
+                    <div class="alert alert-success">{{ flashMessage }}</div>
+                {% endfor %}
+                {% for flashMessage in app.session.flashbag.get('error') %}
+                    <div class="alert alert-danger">{{ flashMessage }}</div>
+                {% endfor %}
+            </div>
+            <div class="form_security">
+            <form method="post">
+                <h3 class="form_security_title">Identifiez-vous :</h3>
+                <label for="inputUsername" class="sr-only">Pseudo</label>
+                <input type="text" value="{{ last_username }}" name="username" id="inputUsername" class="form-control" placeholder="Username" required autofocus />
+                <label for="inputPassword" class="sr-only">Mot de passe</label>
+                <input type="password" name="password" id="inputPassword" class="form-control" placeholder="Password" required />
+
+                <input type="hidden" name="_csrf_token" value="{{ csrf_token('authenticate') }}" />
+
+                <div class="checkbox mb-3">
+                    <label class="d-flex justify-content-between">
+                        <div><input type="checkbox" name="_remember_me" /> Se souvenir de moi</div>
+                        <div><a href="{{ path('app_forgotten_password') }}" class="text-danger">mot de passe oublié</a></div>
+                    </label>
+                </div>
+
+                <button class="btn btn-block btn-primary" type="submit">CONNEXION</button>
+            </form>
+            <div class="form_security_complete">
+                Vous êtes nouveau ?  <a href="{{ path('app_register') }}" class="text-danger">Inscrivez-vous ici-></a>
+            </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
